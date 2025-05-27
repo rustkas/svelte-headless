@@ -75,7 +75,7 @@ Available submodules:
 ## 🧰 Credits
 
 - Based on [Heroicons](https://github.com/tailwindlabs/heroicons)
-- Inspired by [`lucide-svelte`](https://github.com/steeze-ui/lucide-svelte)
+
 
 ---
 
