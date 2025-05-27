@@ -3,7 +3,7 @@
 Minimal, modern and fully typed Heroicons integration for SvelteKit.  
 Tree-shakable, CLI-powered, and zero dependencies.
 
-[![npm version](https://img.shields.io/npm/v/svelte-heroicons.svg?style=flat&color=green)](https://www.npmjs.com/package/@rustkas/svelte-heroicons)
+[![npm version](https://img.shields.io/npm/v/svelte-heroicons.svg?style=flat&color=green)](https://www.npmjs.com/package/@rustkas/@rustkas/svelte-heroicons)
 [![GitHub stars](https://img.shields.io/github/stars/rustkas/svelte-heroicons?style=social)](https://github.com/rustkas/svelte-heroicons)
 
 ---
