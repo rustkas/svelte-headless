@@ -13,6 +13,6 @@
     "stripInternal": true
   },
   "include": ["src/**/*.svelte", "src/**/*.ts"],
-  "exclude": ["node_modules", "dist"],
-  "outDir": "./scripts-dist"
+  "exclude": ["node_modules", "dist"]
+
 }

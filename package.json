@@ -1,57 +1,34 @@
 {
-  "name": "@rustkas/svelte-heroicons",
+  "name": "@rustkas/svelte-headless",
   "version": "1.0.0",
-  "description": "Minimal Heroicons component library for Svelte",
-  "author": "Anatoly Kosorukov",
+    "author": "Anatoly Kosorukov",
   "license": "MIT",
   "type": "module",
-  "keywords": [
-    "svelte",
-    "sveltekit",
-    "heroicons",
-    "icons",
-    "components",
-    "tailwind"
-  ],
+    "description": "Modern and lightweight headless UI components for SvelteKit",
+  "keywords": ["svelte", "sveltekit", "headless-ui", "components", "accessible", "a11y"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rustkas/svelte-heroicons.git"
+    "url": "https://github.com/rustkas/svelte-headless.git"
   },
   "bugs": {
-    "url": "https://github.com/rustkas/svelte-heroicons/issues"
+    "url": "https://github.com/rustkas/svelte-headless/issues"
   },
-  "homepage": "https://github.com/rustkas/svelte-heroicons#readme",
+  "homepage": "https://github.com/rustkas/svelte-headless#readme",
   "scripts": {
-    "generate": "tsx scripts/generate-icons.ts",
-    "validate": "tsx scripts/validate-package.ts",
     "build": "svelte-package",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "prepack": "svelte-package"
   },
-"files": [
-  "lib"
-],
-"sideEffects": false,
-"exports": {
-    ".": {
-      "svelte": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    },
-    "./outline-24": {
-      "svelte": "./lib/outline-24.js"
-    },
-    "./solid-24": {
-      "svelte": "./lib/solid-24.js"
-    },
-    "./solid-20": {
-      "svelte": "./lib/solid-20.js"
-    },
-    "./solid-16": {
-      "svelte": "./lib/solid-16.js"
+  "exports": {
+    "./dialog": {
+      "svelte": "./lib/dialog/Dialog.svelte"
     }
   },
-"svelte": "./lib/index.js",
-"types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "svelte": "./lib/dialog/Dialog.svelte",
+  "types": "./lib/dialog/Dialog.svelte.d.ts",
 "peerDependencies": {
     "svelte": "^5.0.0"
   },
@@ -67,4 +44,6 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   }
+
 }
+

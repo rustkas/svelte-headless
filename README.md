@@ -1,80 +1,33 @@
-# 🧩 @rustkas/svelte-heroicons
+# 🧩 @rustkas/svelte-headless
 
-Minimal, modern and fully typed Heroicons integration for SvelteKit.  
-Tree-shakable, CLI-powered, and zero dependencies.
+Lightweight, modern, and fully typed headless UI components for SvelteKit.  
+No styles, no opinions — just logic, accessibility, and control.
 
-[![npm version](https://img.shields.io/npm/v/@rustkas/svelte-heroicons.svg?style=flat&color=green)](https://www.npmjs.com/package/@rustkas/svelte-heroicons)
+[![npm version](https://img.shields.io/npm/v/@rustkas/svelte-headless.svg?style=flat&color=green)](https://www.npmjs.com/package/@rustkas/svelte-headless)
 
 ---
 
 ## ✨ Features
 
-- ⚡ Tree-shakable ES module exports per style & size
-- 📦 Auto-generated from official Heroicons SVGs
-- 🧠 Type-safe with full TypeScript support
-- 🛠 CLI generator with `--only`, `--style`, `--icon`, `--dry-run`
-- 🎛 Import only what you need: `import { XMarkIcon } from '@rustkas/svelte-heroicons/solid-24'`
-- 🧪 Includes `npm run validate` sandbox test
+- 🧩 Headless components: no styles, full customization
+- ♿ Accessibility built-in (ARIA, keyboard navigation, focus management)
+- 🧠 Modern Svelte 5 syntax with runes and `{@attach}`
+- 📦 Fully typed and ready for TypeScript projects
+- ⚙️ Easy to integrate into any SvelteKit app
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
-npm install @rustkas/svelte-heroicons
-```
-
-```svelte
-<script lang="ts">
-  import { AcademicCapIcon } from '@rustkas/svelte-heroicons/outline-24';
-</script>
-
-<AcademicCapIcon class="w-6 h-6 text-blue-500" />
-```
-
----
-
-## 🎛 CLI Usage (for maintainers)
-
-```bash
-npm run generate -- --only=24 --style=outline
-npm run generate -- --icon=academic-cap,x-mark
-npm run generate -- --dry-run
-```
-
----
-
-## 🧪 Validation
-
-```bash
-npm run validate
-```
-
-This will:
-- Run generation
-- Build with `svelte-package`
-- Pack `.tgz`
-- Install into temporary `validate-playground/`
-- Test import and remove test project
-
----
-
-## 📁 Exports
-
-Available submodules:
-
-```
-@rustkas/svelte-heroicons/outline-24
-@rustkas/svelte-heroicons/solid-20
-@rustkas/svelte-heroicons/solid-16
-...
+npm install @rustkas/svelte-headless
 ```
 
 ---
 
 ## 🧰 Credits
 
-- Based on [Heroicons](https://github.com/tailwindlabs/heroicons)
+- Based on [Headless UI](https://github.com/tailwindlabs/headlessui)
 
 
 ---
