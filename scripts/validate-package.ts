@@ -27,6 +27,8 @@ const tgzName = `${name.replace(/^@/, '').replace(/\//, '-')}-${version}.tgz`;
 
 console.log(`📦 Упаковка: ${tgzName}`);
 execSync(`npm pack`, { cwd: PACKAGE_DIR, stdio: 'inherit' });
+rmSync(path.join(PACKAGE_DIR, tgzName));
+console.log('🧹 Удалён локальный .tgz архив');
 
 // 4. Инициализировать тестовый проект
 execSync('npm init -y', { cwd: TEST_DIR, stdio: 'inherit' });
