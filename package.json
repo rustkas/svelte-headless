@@ -1,0 +1,70 @@
+{
+  "name": "svelte-heroicons",
+  "version": "1.0.0",
+  "description": "Minimal Heroicons component library for Svelte",
+  "author": "Anatoly Kosorukov",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "heroicons",
+    "icons",
+    "components",
+    "tailwind"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rustkas/svelte-heroicons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rustkas/svelte-heroicons/issues"
+  },
+  "homepage": "https://github.com/rustkas/svelte-heroicons#readme",
+  "scripts": {
+    "generate": "tsx scripts/generate-icons.ts",
+    "validate": "tsx scripts/validate-package.ts",
+    "build": "svelte-package",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "prepack": "svelte-package"
+  },
+"files": [
+  "lib"
+],
+"sideEffects": false,
+"exports": {
+    ".": {
+      "svelte": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./outline-24": {
+      "svelte": "./lib/outline-24.js"
+    },
+    "./solid-24": {
+      "svelte": "./lib/solid-24.js"
+    },
+    "./solid-20": {
+      "svelte": "./lib/solid-20.js"
+    },
+    "./solid-16": {
+      "svelte": "./lib/solid-16.js"
+    }
+  },
+"svelte": "./lib/index.js",
+"types": "./lib/index.d.ts",
+"peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "^2.0.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/node": "^22.15.21",
+    "fs-extra": "^11.3.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "svelte-preprocess": "^6.0.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

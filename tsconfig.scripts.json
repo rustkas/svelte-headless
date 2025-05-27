@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "scripts-dist",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "types": ["node"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "declaration": false,
+    "composite": false
+  },
+  "exclude": ["scripts/generate-icons.ts"]
+}

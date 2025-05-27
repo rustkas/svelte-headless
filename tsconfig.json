@@ -1,0 +1,18 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "composite": true,
+    "types": ["svelte"],
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "stripInternal": true
+  },
+  "include": ["src/**/*.svelte", "src/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+  "outDir": "./scripts-dist"
+}
