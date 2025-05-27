@@ -1,5 +1,5 @@
 {
-  "name": "svelte-heroicons",
+  "name": "@rustkas/svelte-heroicons",
   "version": "1.0.0",
   "description": "Minimal Heroicons component library for Svelte",
   "author": "Anatoly Kosorukov",
