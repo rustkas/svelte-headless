@@ -1,58 +1,80 @@
-# `<c-button>` Component
+# 🧱 Button
 
-The `<ฺฺButton>` component is a custom headless UI button built using Svelte 5 syntax, including runes and `{@attach}` support.
+A headless, accessible button component for Svelte 5 with full HTML compatibility and enhanced keyboard/focus behavior.
 
-## ✅ Features
+---
 
-- Fully typed `HTMLButtonAttributes` support
-- Automatic forwarding of native DOM events via `forwardAllEvents()`
-- Custom keyboard click behavior using `createKeyboardClickHandler`
-- Focus management via `focusIfNeeded`
-- `@attach`-based event forwarding for custom elements
-- Compatible with Svelte 5 custom elements
-- Supports slot rendering via `{@render children?.()}`
-- `autofocus`, `disabled`, `tabindex`, `aria-*` bindings supported
-
-## 📥 Props
-
-Inherits all standard HTML button props, including but not limited to:
-
-- `type`: `"button" | "submit" | "reset"`
-- `disabled`: `boolean`
-- `autofocus`: `boolean`
-- `tabindex`: `number`
-- `name`, `value`, `id`, `class`, `style`, `role`
-- `form`, `formaction`, `formmethod`, `formenctype`, `formnovalidate`, `formtarget`
-- `aria-label`, `aria-labelledby`, `aria-disabled`
-
-## 📤 Events
-
-All native DOM events are forwarded:
-- `click`, `focus`, `blur`, `keydown`, `keyup`, `mouseenter`, `mouseleave`, etc.
-
-Special `keydown` behavior handles:
-- `Enter` or `Space` keys → triggers `.click()` when not disabled
-
-## 🧪 Usage
+## ✅ Usage
 
 ```svelte
-<script lang="ts">
-  import 'your-lib-path'; // <c-button> auto-registered via customElement
+<script>
+  import { Button } from '@rustkas/svelte-headless'
 </script>
 
-<c-button class="px-4 py-2 border rounded">
-  Click me
-</c-button>
+<Button>Click me</Button>
 ```
 
-## 📌 Notes
+---
 
-- Use `<c-button>` in DOM (custom element)
-- Use `<Button>` if directly importing `.svelte` file (e.g., in internal apps)
-- Tailwind CSS styles can be passed via `class` prop
+## 🧠 Features
 
-## 🔗 Reference
+- Full support for native `<button>` attributes: `type`, `form`, `name`, `disabled`, `tabindex`, `value`, etc.
+- Auto-focus support on mount via `autofocus` (if not `disabled`).
+- Keyboard click handler for accessibility (`Enter`, `Space` keys).
+- Automatic event forwarding (e.g. `click`, `focus`, `keydown`).
+- `children` render prop support via `{@render}`.
+- Proper `aria-*` attribute handling: `aria-disabled`, `aria-label`, `aria-labelledby`.
 
-- [forwardAllEvents](./utils/forwardAllEvents.ts)
-- [createKeyboardClickHandler](./utils/dom.ts)
-- [focusIfNeeded](./utils/focus.ts)
+---
+
+## 🔧 Props
+
+| Prop            | Type                              | Default     | Description                          |
+|-----------------|-----------------------------------|-------------|--------------------------------------|
+| `type`          | `'button' \| 'submit' \| 'reset'` | `'button'` | Button behavior type                 |
+| `disabled`      | `boolean`                         | `false`     | Disables the button                  |
+| `autofocus`     | `boolean`                         | `false`     | Auto-focuses the button on mount     |
+| `tabindex`      | `number`                          | `0 or -1`   | Automatically determined             |
+| `form` and co.  | `string`                          | —           | All standard `form-*` attributes     |
+| `aria-disabled` | `boolean`                         | Fallbacks to `disabled` | Accessibility support   |
+| `class`         | `string`                          | —           | Custom CSS / Tailwind classes        |
+| `children`      | `() => any`                       | —           | Render function for slot content     |
+
+---
+
+## 📌 Events
+
+All native DOM events are forwarded:
+
+- `onclick`, `onfocus`, `onblur`, `onkeydown`, `onkeyup`, etc.
+
+---
+
+## 💡 Examples
+
+### Button with icon
+
+```svelte
+<Button class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded">
+  <Icon name="check" />
+  Submit
+</Button>
+```
+
+### Submit button inside a form
+
+```svelte
+<form onsubmit={handleSubmit}>
+  <Button type="submit">Send</Button>
+</form>
+```
+
+---
+
+## ⚠️ Notes
+
+- No styling, transitions, or actions included – fully headless.
+- `autofocus` is ignored if the button is `disabled`.
+- Pass `children` as a render function to use `{@render}` inside.
+
+Feel free to extend or wrap this component to add custom loading states, icons, or animations.
