@@ -1,0 +1,3 @@
+[submodule "scripts/headlessui"]
+	path = scripts/headlessui
+	url = https://github.com/tailwindlabs/headlessui.git
