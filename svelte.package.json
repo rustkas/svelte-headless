@@ -1,0 +1,5 @@
+{
+  "files": "src/lib",
+  "outDir": "dist",
+  "emitTypes": true
+}

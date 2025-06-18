@@ -5,14 +5,18 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "composite": true,
-    "types": ["svelte"],
+    "types": ["svelte","vitest","vite/client"],
     "declaration": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": true,
     "outDir": "dist",
-    "stripInternal": true
+    "stripInternal": true,
+    "baseUrl": "src",
+    "paths": {
+      "$lib/*": ["lib/*"]
+    }
   },
-  "include": ["src/**/*.svelte", "src/**/*.ts"],
+  "include": ["src/**/*.svelte", "src/**/*.ts", "tests", "tests/setup.d.ts"],
   "exclude": ["node_modules", "dist"]
 
 }

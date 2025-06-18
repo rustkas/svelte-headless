@@ -17,11 +17,27 @@ No styles, no opinions — just logic, accessibility, and control.
 
 ---
 
+## 📦 Peer Dependencies
+
+This library requires the following packages to be installed in your project:
+
+```bash
+npm install svelte tailwindcss
+```
+
+---
+
 ## 🚀 Quick Start
 
 ```bash
 npm install @rustkas/svelte-headless
 ```
+---
+
+##  📘 Components Documentation
+- [Button](doc/Button.md)
+- [Checkbox](doc/Checkbox.md)
+
 
 ---
 
